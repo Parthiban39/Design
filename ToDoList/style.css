@@ -1,0 +1,107 @@
+body {
+    background-color: whitesmoke;
+    display: grid;
+    place-items: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+}
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    --border-radius: 6px;
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    min-height: 500px;
+    padding: 1.2rem;
+    background: #73d2de;
+    border-radius: 16px;
+    gap: 10px;
+}
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+button {
+    border: 0;
+    font-family:inherit;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+form input {
+  width: 78%;
+  padding: 0.5rem;
+  background-color: #ddd;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  font-family: inherit;
+  border: 0;
+  outline: none;
+}
+form input::placeholder {
+  color: hsl(0, 0%, 8%);
+}
+form button {
+  width: 20%;
+  background-color: #fbb13c;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task {
+  font-weight: 600;
+  color: #293241;
+  background-color: #219ebc;
+  padding: 0.5rem 0.6rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.task .checkbox {
+    border-radius: 50%;
+    width: 1.3em;
+    height: 1.3em;
+    border: 2px solid #eeaa74;
+    outline: none;
+    appearance: none;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+.checkbox::before {
+  content: "";
+  width: 50%;
+  height: 50%;
+  background-color: #eeaa74;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 120ms ease-in-out;
+}
+
+.task .checkbox:checked::before {
+  transform: scale(1);
+}
+
+.task.done input[type="checkbox"] + .text {
+  text-decoration: line-through;
+}
+
+.task .delete {
+  padding: 0.5rem 1.2rem;
+  color: white;
+  background-color: #023047;
+  margin-left: auto;
+}
