@@ -1,0 +1,84 @@
+.form-container {
+    top: 10vh;
+    height: 50vh;
+    max-width:400px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ddd;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.3);
+}
+.form-container{
+    text-align: center;
+}
+.back a{
+    text-decoration: none;
+}
+.back {
+    display: block;
+    justify-self: start;
+}
+.back button{
+    font-size: 14px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fff;
+}
+.back button:hover{
+    background-color: #0679f4;
+}
+.login h2 {
+    font-size: xx-large;
+    margin-bottom: 1.5rem;
+}
+.form-group{
+    margin-top: 20px;
+}
+.form-group label{
+    display:block;
+    font-size: large;
+}
+.form-control {
+    font-size: 16px;
+    width: 70%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+.btn{
+    margin-top: 30px;
+    font-size: 16px;
+    width: auto;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn button{
+    display: flex;
+    justify-content: center;
+  }
+.btn:hover {
+    background-color: #0056b3;
+}
+p{
+    margin-top: 15px;
+}
+.btn-link {
+    font-size: 18px;
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration:none;
+    padding: 0;
+} 
+.btn-link:hover {
+    color: #0056b3;
+}
