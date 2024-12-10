@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pronounciation</title>
+</head>
+<body>
+    <div class="container" >
+        <h1>Text-to-speech</h1>
+        <textarea id="text" placeholder="Enter your thoughts to convert!"></textarea>
+        <button onclick="speak()">Touch me</button>
+    </div>
+</body>
+
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        background-color: #f0f0f0;
+    }
+    .container{
+        border: 1px solid #ddd;
+        box-shadow: 15px 15px 15px rgba(0,0,0,0.3);
+        margin: auto;
+        width: 25rem;
+        height: 18rem;
+        text-align: center;
+        padding: 1.5rem;
+        background-color: #fff;
+    }
+    textarea{
+        width: 90%;
+        font-size: 16px;
+        height: 110px;
+        margin: 30px;
+        justify-content: center;
+        padding: 10px;
+    }
+    button{
+        padding: 8px;
+        font-size: 18px;
+        outline: none;
+        border: 1px solid black;
+        border-radius: 8px;
+        width: 8rem;
+        background-color: whitesmoke;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        }
+        button:hover{
+            background-color: #ddd;
+        }
+</style>
+
+<script>
+    var talk = new SpeechSynthesisUtterance();
+
+function speak() {
+  var text_content = document.getElementById('text').value;
+  if (text_content.trim() !== "") {
+      talk.text = text_content;
+      talk.volume = 30;
+      window.speechSynthesis.speak(talk);
+  } else {
+      alert("Please enter some text.");
+  }
+}
+  </script>
+</html>
